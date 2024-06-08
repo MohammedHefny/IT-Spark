@@ -1,0 +1,9 @@
+<div>
+  <input
+    type="password"
+    [(ngModel)]="password"
+    (input)="checkStrength(password)"
+    placeholder="Enter password"
+  />
+  <div [ngClass]="strength">{{ strength }}</div>
+</div>

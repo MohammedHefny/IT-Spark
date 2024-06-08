@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  text-transform: capitalize;
+  background-image: linear-gradient(to right, #e1d7d7, #e5e0e0) !important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-color-alt) !important;
+}
+
+:root {
+  --primary-color: #2b3983;
+  --primary-color-alt: #3f51b5;
+  --secondary-color: #4caf50;
+  --secondary-color-alt: #d96641;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+
+input.ng-touched.ng-invalid,
+textarea.ng-touched.ng-invalid {
+  border: 2px solid tomato !important;
+}
+
+input.ng-touched.ng-valid,
+textarea.ng-touched.ng-valid {
+  border: 3px solid #2196f3 !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

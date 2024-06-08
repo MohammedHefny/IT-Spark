@@ -1,0 +1,94 @@
+button {
+  color: red;
+}
+
+.hold {
+  @media (max-width: 991px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .image {
+    @media (max-width: 991px) {
+      margin-top: 20px;
+    }
+
+    img {
+      transform: rotate(-90deg);
+    }
+  }
+
+  form {
+    label {
+      margin-right: 20px;
+      text-align: center;
+      color: var(--secondary-color);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--primary-color);
+      background-color: transparent;
+      display: inline;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      color: var(--secondary-color);
+      border-radius: 5px;
+
+      &:focus {
+        outline: var(--primary-color-alt);
+        caret-color: var(--primary-color-alt);
+      }
+    }
+
+    textarea {
+      height: 60px;
+      resize: none;
+    }
+
+    .buttons {
+      text-align: center;
+      color: var(--primary-color);
+
+      :nth-child(1) {
+        margin-right: 20px;
+        border: 3px solid var(--primary-color-alt);
+        border-radius: 5px;
+        background-color: transparent;
+        font-weight: bold;
+        letter-spacing: 2px;
+        cursor: pointer;
+
+        &:disabled {
+          background-color: transparent;
+          border: 3px solid white;
+          color: black;
+          cursor: no-drop;
+        }
+      }
+
+      :nth-child(2) {
+        margin-right: 20px;
+        border: 2px solid var(--secondary-color-alt);
+        border-radius: 5px;
+        background-color: transparent;
+        font-weight: bold;
+        letter-spacing: 2px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.popup {
+  position: absolute !important;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: tomato;
+  padding: 30px;
+  font-size: 30px;
+  color: white;
+  border-radius: 20px;
+}

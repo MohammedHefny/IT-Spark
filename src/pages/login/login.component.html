@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="hold">
+    <div class="col-12">
+      <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="row">
+          <div class="col-md-12">
+            <label for="username">Enter Your Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              ngModel
+              required
+              [(ngModel)]="username"
+              pattern="[^1-9]+"
+              #user="ngModel"
+            />
+            <span *ngIf="user.invalid && user.touched" class="help-block">
+              Enter A valid Username Without Any Numbers
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label for="email">Enter Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              ngModel
+              required
+              email
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              ngModel
+              required
+              [(ngModel)]="pass1"
+              #p1="ngModel"
+              [(ngModel)]="password"
+              (input)="checkStrength(password)"
+            />
+          </div>
+          <div
+            [ngClass]="{
+              strong: strength === 'Strong',
+              medium: strength === 'Medium',
+              weak: strength === 'Weak'
+            }"
+          >
+            {{ strength }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label for="password2">ReEnter The Password</label>
+            <input
+              type="password"
+              id="password2"
+              name="pass2"
+              ngModel
+              required
+              [(ngModel)]="pass2"
+              (keyup)="onPassBlur()"
+              #p2="ngModel"
+            />
+
+            <span
+              *ngIf="pass1 != pass2 && p1.touched && p2.touched"
+              class="help-block"
+            >
+              Non Matching Passwords
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="buttons">
+              <button
+                type="submit"
+                [disabled]="f.invalid || passwordMatch === false"
+              >
+                Login
+              </button>
+              <button type="button" (click)="onLogout()">Logout</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div *ngIf="showPopup" class="popup position-absolute">
+  You Have Successfully Logged Out
+</div>

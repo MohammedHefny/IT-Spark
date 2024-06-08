@@ -1,0 +1,19 @@
+{
+  "LOGIN_WORKS": "login works!",
+  "HELLO_MYFRIEND": "Hello MyFriend",
+  "home": "Home",
+  "login": "Login",
+  "Employee": "Employee",
+  "FirstName": "First Name",
+  "LastName": "Last Name",
+  "Email": "Email",
+  "Dob": "Date of Birth",
+  "Gender": "Gender",
+  "Education": "Education",
+  "Company": "Company",
+  "Exp.": "Experience",
+  "Package": "Package",
+  "Action": "Action",
+  "Dashboard": "Dashboard",
+  "SomeCharts": "Some Charts"
+}
